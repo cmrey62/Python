@@ -1,5 +1,3 @@
-import random
-
 class myPet:
   def __init__(self, petSpecies, petName, petAge):
     self.species = petSpecies
