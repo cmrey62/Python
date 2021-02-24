@@ -1,0 +1,48 @@
+import random
+
+class myPet:
+  def __init__(self, petSpecies, petName, petAge):
+    self.species = petSpecies
+    self.name = petName
+    self.age = petAge
+  
+
+class Dog(myPet):
+  def __init__(self, dogName, dogAge):
+    self.species = "Dog"
+    self.name = dogName
+    self.age = dogAge
+
+  def playFetch(self):
+    print("Your pet " + self.name + " seems happy to play.")
+
+orangeDog = Dog("Ralph", 2)
+print(orangeDog.name)
+orangeDog.playFetch()
+
+class alien:
+  def __init__(self, alienSpecies, alienName, numOfArms):
+    self.species = alienSpecies
+    self.name = alienName
+    self.arms = numOfArms
+
+  def highFive(self):
+    for x in range (0, int(self.arms)):
+      print(self.name + " gives you a high five!")
+
+myAlien = alien("Martian", "Dave", 6)
+myAlien.highFive()
+
+class human(alien):
+  def __init__(self, humanName, regionLivedIn):
+    self.name = humanName
+    self.species = "Human"
+    self.arms = 2
+    self.region = regionLivedIn
+
+  def talk(self, speech):
+    print(speech)
+
+Jerry = human("Jerry", "United States")
+Jerry.talk("Hi, I'm Jerry")
+Jerry.highFive()
