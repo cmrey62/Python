@@ -1,3 +1,5 @@
+#This program creates a symmetrical triangle using the digits 1-9, with the input being the height of the triangle.
+
 n = input("height of triangle: ")
 n = int(n)
 rowNum = 0
