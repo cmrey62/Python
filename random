@@ -1,0 +1,28 @@
+import random
+
+randNum = print(random.randint(1, 12))
+
+def randomNumber(maxInt):
+  rand = random.randint(1, maxInt)
+  return rand
+
+num = randomNumber(10)
+print(num)
+
+def roll():
+  rollValue = random.randint(1, 20)
+  return rollValue
+
+myRoll = roll()
+print(myRoll)
+
+if myRoll == 1:
+  print("You lost 1,000 dollars!")
+elif myRoll < 10:
+  print("You lost " + str(10*(10 - myRoll)) + " dollars!")
+elif myRoll == 10 or myRoll == 11:
+  print("You won nothing.")
+elif myRoll < 20:
+  print("You won " + str(10*(myRoll - 10)) + " dollars!")
+else:
+  print("You won 1000 dollars!")
