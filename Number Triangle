@@ -1,0 +1,23 @@
+n = input("height of triangle: ")
+n = int(n)
+rowNum = 0
+
+while rowNum < n:
+    spaceNum = rowNum + 1
+    x = spaceNum
+    y = 1
+
+    while spaceNum < n:
+        print(" ", end = "")
+        spaceNum += 1
+
+    while x > 0:
+        print((rowNum - x + 2) % 10, end = "")
+        x -= 1
+
+    while y <= rowNum:
+        print((rowNum - y + 1) % 10, end = "")
+        y += 1
+
+    print()
+    rowNum += 1
